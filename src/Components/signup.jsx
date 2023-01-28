@@ -29,9 +29,6 @@ const SignUp = () => {
             alert(result.message)
 
         } else {
-            // localStorage.setItem("userId", JSON.stringify(result.data.userId))
-            // localStorage.setItem("token", JSON.stringify(result.data.token))
-            // console.log(result);
             navigate('/login')
         }
     }
@@ -80,10 +77,7 @@ const SignUp = () => {
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     /><br /><br />
 
-
-                    {/* <Link to="/login" > */}
                     <button className="btn" type="submit" onClick={SignUp}>SignUp</button><br />
-                    {/* </Link> */}
 
                     <span>
                         Already have an account ? <Link to="/login">Login.</Link>
@@ -91,9 +85,6 @@ const SignUp = () => {
 
                 </form>
             </div>
-
-
-
 
         </div>
     )

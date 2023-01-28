@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import axios from 'axios'
 import './login.css'
 
 
@@ -28,7 +27,7 @@ const Login = () => {
         } else {
             localStorage.setItem("userId", JSON.stringify(result.data.userId))
             localStorage.setItem("token", JSON.stringify(result.data.token))
-            navigate('/getBook')
+            navigate('/task')
         }
     }
 
@@ -55,9 +54,7 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     /><br /><br />
 
-                    {/* <Link to="/getBook" > */}
                     <button className="btn" type="submit" onClick={logIn}>Login</button><br/>
-                    {/* </Link> */}
 
                     <span>
                         Don't have an account ? <Link to="/signup">SignUp.</Link>

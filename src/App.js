@@ -5,9 +5,7 @@ import Home from './Components/home'
 import ErrorPage from './Components/errorPage'
 import SignUp from './Components/signup';
 import Login from './Components/login';
-import Book from './Components/bookPage'
-import AddBook from './Components/addBook';
-import UpdateBook from './Components/updateBook';
+import Task from './Components/task'
 
 
 function App() {
@@ -39,12 +37,8 @@ function App() {
 
             <Route path='login' element={<Login />} />
 
-            <Route path='getBook' element={<Book />} />
+            <Route path='task' element={<Task />} />
             
-            <Route path='addBook' element={<AddBook />} />
-            
-            <Route path='updateBook/:id' element={<UpdateBook />} />
-
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </div>
